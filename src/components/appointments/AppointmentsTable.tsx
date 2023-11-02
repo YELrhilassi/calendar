@@ -1,4 +1,5 @@
 import classNames from "classnames";
+
 export default function AppointmentsTable({ days }: any) {
   return (
     <table className="shadow w-full ring-1 ring-black ring-opacity-5 lg:flex lg:flex-auto lg:flex-col">
@@ -31,7 +32,7 @@ export default function AppointmentsTable({ days }: any) {
         <tr className="hidden w-full lg:grid lg:grid-cols-7 lg:grid-rows-6 lg:gap-px">
           {days.map((day: any) => (
             <td
-              key={day.date}
+              key={day.day}
               className={classNames(
                 day.isCurrentMonth ? "bg-white" : "bg-gray-50 text-gray-500",
                 "relative py-2 px-3"
